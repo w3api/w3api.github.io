@@ -109,16 +109,15 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		let permalink = ''
 		let ppermalink = r.properties?.['Permalink']?.['formula']
 		if (ppermalink?.length > 0) {
-			permalink = ppermalink[0]?.['plain_text']
+			permalink = ppermalink?.['string']
         }
-        console.log(ppermalink)
 
 
         // Key
 		let key = ''
 		let pkey = r.properties?.['Key']?.['formula']
 		if (pkey?.length > 0) {
-			permalink = pkey[0]?.['plain_text']
+			permalink = pkey[0]?.['string']
         }
 
 		// comments
