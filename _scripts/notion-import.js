@@ -105,6 +105,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
             cat = pcats[0]?.['plain_text']
         }
 
+        console.log(cat);
         let nav = cat.toLoweCase();
 
         // Permalink
