@@ -111,6 +111,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		if (ppermalink?.length > 0) {
 			permalink = ppermalink[0]?.['plain_text']
         }
+        console.log(permalink)
 
 
         // Key
