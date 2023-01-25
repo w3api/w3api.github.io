@@ -146,7 +146,7 @@ title: ${title}
 permalink: ${permalink}
 date: ${date}
 key: ${key}
-category: ${category}
+category: ${cat}
 tags: ${t}
 sidebar:
   nav: ${nav}
