@@ -12,6 +12,9 @@ tags:
 ## **Descripción**
 
 
+clase date de `Date` y de [`Date enlazado`](/a416272103d54c22a47baa8b92efe177)
+
+
 ## **Sintaxis**
 
 
@@ -25,36 +28,6 @@ public class Date extends Object implements Serializable, Cloneable, Comparable<
 - [**Date()**](https://www.w3api.com/Java/Date-java-util/Date/)
 
 ## **Métodos**
-
-
-[Date.parse](6ca3f3c2-3d00-476f-a331-08d53b67e0d5)
-
-
-	## **Descripción**
-
-
-	## **Sintaxis**
-
-
-	```java
-	@Deprecated public static long parse(String s)
-	```
-
-
-	## **Parámetros**
-
-	- **String s**,
-
-	## **Clase Padre**
-
-
-	[**Date**](https://www.w3api.com/Java/Date-java-util/)
-
-
-	## **Ejemplo**
-
-
-	## **Líneas de Código**
 
 - [**after()**](https://www.w3api.com/Java/Date-java-util/after)
 - [**before()**](https://www.w3api.com/Java/Date-java-util/before)
