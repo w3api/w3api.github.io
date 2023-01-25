@@ -14,9 +14,7 @@ const notion = new Client({
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
 (async () => {
-	// ensure directory exists
-	const root = path.join('_posts', 'notion')
-	fs.mkdirSync(root, { recursive: true })
+
 
 	const databaseId = process.env.DATABASE_ID;
 	// TODO has_more
@@ -114,12 +112,15 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
         // Key
 		let key = ''
 		let pkey = r.properties?.['Key']?.['formula']
-		key = pkey?.['string']
+        key = pkey?.['string']
         
-    
-		// comments
-		const comments = r.properties?.['No Comments']?.['checkbox'] == false
-        
+
+        // slug
+        let slug = ''
+        let pslug = r.properties?.['Slug']?.['rich_text']
+        if (pslug?.length > 0) {
+			slug = pslug[0]?.['plain_text']
+        }
 
         // frontmatter
         /*
@@ -151,7 +152,11 @@ sidebar:
 ---
 `
 		const mdblocks = await n2m.pageToMarkdown(id);
-		const md = n2m.toMarkdownString(mdblocks);
+        const md = n2m.toMarkdownString(mdblocks);
+        
+        // ensure directory exists
+	    const root = path.join('_posts', cat,slug.substring(0,slug.indexOf("/")))
+	    fs.mkdirSync(root, { recursive: true })
 
 		//writing to file
 		const ftitle = `20210101-${title.replaceAll(' ', '-').toLowerCase()}.md`
