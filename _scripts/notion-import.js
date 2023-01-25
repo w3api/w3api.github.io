@@ -53,7 +53,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		for (const t of pelementos) {
 			const n = t?.['name']
 			if (n) {
-				tags.push(n)
+				tags.push(n.toLowerCase())
 			}
         }
 
@@ -61,7 +61,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		for (const t of pversiones) {
 			const n = t?.['name']
 			if (n) {
-				tags.push(n)
+				tags.push(n.toLowerCase())
 			}
         }
 
@@ -69,7 +69,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		for (const t of ppaquetes) {
 			const n = t?.['name']
 			if (n) {
-				tags.push(n)
+				tags.push(n.toLowerCase())
 			}
         }
 
@@ -77,7 +77,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		for (const t of pmodulos) {
 			const n = t?.['name']
 			if (n) {
-				tags.push(n)
+				tags.push(n.toLowerCase())
 			}
         }
 
@@ -107,14 +107,15 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 
         // Permalink
 		let permalink = ''
-		let ppermalink = r.properties?.['Permalink']?.['title']
+		let ppermalink = r.properties?.['Permalink']?.['formula']
 		if (ppermalink?.length > 0) {
 			permalink = ppermalink[0]?.['plain_text']
         }
 
+
         // Key
 		let key = ''
-		let pkey = r.properties?.['Key']?.['title']
+		let pkey = r.properties?.['Key']?.['formula']
 		if (pkey?.length > 0) {
 			permalink = pkey[0]?.['plain_text']
         }
