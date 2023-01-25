@@ -116,9 +116,9 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
         // Key
 		let key = ''
 		let pkey = r.properties?.['Key']?.['formula']
-		if (pkey?.length > 0) {
-			permalink = pkey[0]?.['string']
-        }
+		key = pkey?.['string']
+        
+        console.log(pkey)
 
 		// comments
 		const comments = r.properties?.['No Comments']?.['checkbox'] == false
