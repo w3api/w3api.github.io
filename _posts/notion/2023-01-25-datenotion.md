@@ -1,0 +1,114 @@
+---
+layout: post
+comments: false
+date: 2023-01-25
+title: DateNotion
+tags:
+  - Clase
+  - Java
+
+---
+
+## **Descripción**
+
+
+## **Sintaxis**
+
+
+```java
+public class Date extends Object implements Serializable, Cloneable, Comparable<Date>
+```
+
+
+## **Constructores**
+
+- [**Date()**](https://www.w3api.com/Java/Date-java-util/Date/)
+
+## **Métodos**
+
+
+[Date.parse](6ca3f3c2-3d00-476f-a331-08d53b67e0d5)
+
+
+	## **Descripción**
+
+
+	## **Sintaxis**
+
+
+	```java
+	@Deprecated public static long parse(String s)
+	```
+
+
+	## **Parámetros**
+
+	- **String s**,
+
+	## **Clase Padre**
+
+
+	[**Date**](https://www.w3api.com/Java/Date-java-util/)
+
+
+	## **Ejemplo**
+
+
+	## **Líneas de Código**
+
+- [**after()**](https://www.w3api.com/Java/Date-java-util/after)
+- [**before()**](https://www.w3api.com/Java/Date-java-util/before)
+- [**clone()**](https://www.w3api.com/Java/Date-java-util/clone)
+- [**compareTo()**](https://www.w3api.com/Java/Date-java-util/compareTo)
+- [**equals()**](https://www.w3api.com/Java/Date-java-util/equals)
+- [**from()**](https://www.w3api.com/Java/Date-java-util/from)
+- [**getDate()**](https://www.w3api.com/Java/Date-java-util/getDate)
+- [**getDay()**](https://www.w3api.com/Java/Date-java-util/getDay)
+- [**getHours()**](https://www.w3api.com/Java/Date-java-util/getHours)
+- [**getMinutes()**](https://www.w3api.com/Java/Date-java-util/getMinutes)
+- [**getMonth()**](https://www.w3api.com/Java/Date-java-util/getMonth)
+- [**getSeconds()**](https://www.w3api.com/Java/Date-java-util/getSeconds)
+- [**getTime()**](https://www.w3api.com/Java/Date-java-util/getTime)
+- [**getTimezoneOffset()**](https://www.w3api.com/Java/Date-java-util/getTimezoneOffset)
+- [**getYear()**](https://www.w3api.com/Java/Date-java-util/getYear)
+- [**hashCode()**](https://www.w3api.com/Java/Date-java-util/hashCode)
+- [**parse()**](https://www.w3api.com/Java/Date-java-util/parse)
+- [**setDate()**](https://www.w3api.com/Java/Date-java-util/setDate)
+- [**setHours()**](https://www.w3api.com/Java/Date-java-util/setHours)
+- [**setMinutes()**](https://www.w3api.com/Java/Date-java-util/setMinutes)
+- [**setMonth()**](https://www.w3api.com/Java/Date-java-util/setMonth)
+- [**setSeconds()**](https://www.w3api.com/Java/Date-java-util/setSeconds)
+- [**setTime()**](https://www.w3api.com/Java/Date-java-util/setTime)
+- [**setYear()**](https://www.w3api.com/Java/Date-java-util/setYear)
+- [**toGMTString()**](https://www.w3api.com/Java/Date-java-util/toGMTString)
+- [**toInstant()**](https://www.w3api.com/Java/Date-java-util/toInstant)
+- [**toLocaleString()**](https://www.w3api.com/Java/Date-java-util/toLocaleString)
+- [**toString()**](https://www.w3api.com/Java/Date-java-util/toString)
+- [**UTC()**](https://www.w3api.com/Java/Date-java-util/UTC)
+
+## **Ejemplo**
+
+
+```java
+Date d = new Date();
+Calendar c = new GregorianCalendar(); 
+c.setTime(d);
+
+String dia, mes, annio, hora, minuto, segundo;
+
+dia = Integer.toString(c.get(Calendar.DATE));
+mes = Integer.toString(c.get(Calendar.MONTH));
+annio = Integer.toString(c.get(Calendar.YEAR));
+hora = Integer.toString(c.get(Calendar.HOUR_OF_DAY));
+minuto = Integer.toString(c.get(Calendar.MINUTE));
+segundo = Integer.toString(c.get(Calendar.SECOND));
+
+System.out.println (hora + ":" + minuto + ":" + segundo + " " + dia + "/" + mes +"/" + annio);
+```
+
+
+## **Líneas de Código**
+
+
+[child_database](d21ac3f8-1835-4380-a087-2e9350d8b157)
+
