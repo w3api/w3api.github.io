@@ -99,7 +99,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
         */
 
         // Categoría
-       let cat = '';
+       let cat = ''
        let pcats = r.properties?.['Categories']?.['multi_select']
        if (pcats?.length > 0) {
             cat = pcats[0]?.['plain_text']
