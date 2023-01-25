@@ -142,7 +142,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
         */
         
 const fm = `---
-title: ${title}${fmtags}${fmcats}
+title: ${title}
 permalink: ${permalink}
 date: ${date}
 key: ${key}
