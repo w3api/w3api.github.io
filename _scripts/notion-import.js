@@ -101,8 +101,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
         // Categoría
        let cat = ''
        let pcats = r.properties?.['Categories']?.['multi_select']
-        cat = pcats[0]?.['plain_text']
-
+       cat = pcats[0]?.['plain_text']
+       console.log("A: " + cat)
 
         let nav = cat.toLowerCase();
 
