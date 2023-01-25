@@ -108,9 +108,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
         // Permalink
 		let permalink = ''
 		let ppermalink = r.properties?.['Permalink']?.['formula']
-		if (ppermalink?.length > 0) {
-			permalink = ppermalink?.['string']
-        }
+		permalink = ppermalink?.['string']
 
 
         // Key
@@ -118,8 +116,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		let pkey = r.properties?.['Key']?.['formula']
 		key = pkey?.['string']
         
-        console.log(pkey)
-
+    
 		// comments
 		const comments = r.properties?.['No Comments']?.['checkbox'] == false
         
