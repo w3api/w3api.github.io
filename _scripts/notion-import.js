@@ -154,8 +154,16 @@ sidebar:
 		const mdblocks = await n2m.pageToMarkdown(id);
         const md = n2m.toMarkdownString(mdblocks);
         
+        let letra = slug.substring(0,1).toUpperCase()
+        let dir = ""
+        if (slug.indexOf("/")<0) {
+            dir = slug.substring(0,slug.indexOf("/"))
+        } else {
+            dir = slug
+        }
+
         // ensure directory exists
-	    const root = path.join('_posts', cat,slug.substring(0,slug.indexOf("/")))
+	    const root = path.join('_posts', cat,letra,dir)
 	    fs.mkdirSync(root, { recursive: true })
 
 		//writing to file
