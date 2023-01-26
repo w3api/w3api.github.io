@@ -156,7 +156,7 @@ sidebar:
         
         let letra = slug.substring(0,1).toUpperCase()
         let dir = ""
-        if (slug.indexOf("/")<0) {
+        if (slug.indexOf("/")>=0) {
             dir = slug.substring(0,slug.indexOf("/"))
         } else {
             dir = slug
