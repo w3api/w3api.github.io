@@ -167,7 +167,7 @@ sidebar:
 	    fs.mkdirSync(root, { recursive: true })
 
 		//writing to file
-		const ftitle = `20210101-${title.replaceAll(' ', '-').replaceAll('(','').replaceAll(')','')}.md`
+		const ftitle = `2021-01-01-${title.replaceAll(' ', '-').replaceAll('(','').replaceAll(')','')}.md`
 		fs.writeFile(path.join(root, ftitle), fm + md, (err) => {
 			if (err) {
 				console.log(err);
